@@ -1,0 +1,214 @@
+/*
+	Navigation
+------------------------------------------------*/
+
+$siteheader-bg: #fff;
+$siteheader-height: 60px;
+$logo-height: $siteheader-height / 2;
+$navlink-border-width: 4px;
+
+.siteheader {
+    background-color: $siteheader-bg;
+    border-bottom: 1px solid $grey;
+    border-bottom-color: rgba(#000, .2);
+    box-shadow: rgba(#000, .15) 0 0 2px;
+    z-index: 1;
+}
+
+.sitebrand {
+    padding: 0 0 0 30px;
+}
+
+.logo {
+    display: inline-block;
+    max-height: $logo-height;
+    margin: 0;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@include media($small-screen-up) {
+
+    .siteheader {
+        height: $siteheader-height;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sitebrand {
+        @include span-columns(3);
+    }
+
+    .sitenav {
+        @include span-columns(9);
+        text-align: right;
+    }
+
+    .sitebrand,
+    .sitenav {
+        display: inline-block;
+        vertical-align: middle;
+        height: $siteheader-height;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+.navmenu-button {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    font-weight: $font-bold;
+    padding: em(12) em(20);
+
+    position: absolute;
+    top: em(18);
+    right: em(14);
+
+    &:link,
+    &:visited,
+    &:hover {
+        color: #fff;
+    }
+
+    &:active {
+        background-color: rgba(#000,.2);
+    }
+}
+
+.navmenu {
+    margin: 0;
+
+    @include media($small-screen-down) {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    @include media($small-screen-up) {
+        // margin-bottom: -$navlink-border-width/2;
+
+        &--secondary {
+            padding-right: em(30);
+        }
+
+    }
+}
+
+.navmenu-sub {
+
+    @include media($small-screen-up) {
+        background: $siteheader-bg;
+        border-bottom: 1px solid darken($grey-light, 20);
+        box-shadow: rgba(#000,.2) 0 2px 2px;
+        border-top: 0 transparent;
+        display: none;
+        margin: 0;
+        min-width: em(180);
+        padding: 0;
+        text-align: left;
+        border-radius: 0 0 $base-border-radius $base-border-radius;
+
+        margin-top: -$navlink-border-width/2;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 2;
+    }
+}
+
+.navlink {
+
+    @include media($small-screen-down) {
+        display: block;
+        font-size: 16px;
+        font-size: rem(16);
+        overflow: hidden;
+        width: 100%;
+
+        a {
+            color: #fff;
+            display: block;
+            padding: 0 em(20);
+
+            &:link,
+            &:visited,
+            &:hover {
+                color: #fff;
+            }
+
+            &:active {
+                background-color: rgba(#000,.2);
+            }
+        }
+    }
+
+    @include media($small-screen-up) {
+        display: inline-block;
+        @include font-size(15);
+        font-weight: $font-bold;
+        position: relative;
+        vertical-align: middle;
+
+        a {
+            border-bottom: $navlink-border-width solid transparent;
+            color: $brand-alt;
+            display: block;
+            height: $siteheader-height;
+            line-height: calc(#{$siteheader-height} - 1px);
+            padding: 0 em(20);
+        }
+
+        &:hover {
+            // background: #fff;
+
+            .navmenu-sub {
+                display: block;
+            }
+        }
+
+        &.active a {
+            border-bottom: $navlink-border-width solid $brand-primary; // $grey-light; rgba(#000,.15);
+            color: $brand-alt-mid;
+        }
+
+        .navmenu-sub & {
+            display: block;
+            margin: 0;
+
+            &:hover {
+                background-color: rgba(#000,.05);
+            }
+
+            a {
+                border: 0;
+                display: block;
+                height: auto;
+                line-height: 1;
+                padding: em(10) em(16);
+
+                &:hover {
+                    border: 0;
+                }
+            }
+        }
+
+        .navmenu--secondary & {
+            line-height: 1;
+        }
+
+        &--session {
+            // min-width: em(200);
+            // text-align: left;
+
+            // .avatar {
+            //     margin-right: em(10);
+            // }
+        }
+
+    }
+}

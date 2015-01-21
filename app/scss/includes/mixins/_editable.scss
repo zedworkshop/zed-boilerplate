@@ -1,0 +1,6 @@
+@mixin editable-styling($spacing: $base-spacing/3) {
+	line-height: 1.1;
+	margin-left: -$spacing;
+	margin-bottom: -$spacing;
+	padding: $spacing/2 $spacing;
+}
