@@ -10,17 +10,23 @@ body {
 	background: $base-background-color;
 	min-height: 100%;
 
-	display: flex;
-	flex-direction: column;
-}
+	&.fullsize {
 
-main {
-	overflow-x: hidden;
+		@include media($small-screen-up) {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+	}
 }
 
 /*
     Base layout styles from bootstrap.css
 ------------------------------------------------*/
+
+main {
+	overflow-x: hidden;
+}
 
 .container,
 .container-narrow {

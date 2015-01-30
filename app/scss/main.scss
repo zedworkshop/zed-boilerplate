@@ -16,6 +16,8 @@
 // Layout
 @import 'layout/layout';
 @import 'layout/flexboxgrid';
+@import 'layout/header';
+@import 'layout/footer';
 @import 'layout/navigation';
 @import "layout/forms";
 
@@ -42,5 +44,6 @@
 @import 'layout/utilities';
 
 // Pages
+@import 'pages/home';
 
 // Themes
