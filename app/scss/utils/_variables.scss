@@ -1,6 +1,6 @@
 // Typography
-$sans-serif: "source-sans-pro", $helvetica;
-$serif: 'Radley', $georgia;
+$sans-serif: "proxima-nova", $helvetica;
+$serif: "garamond-premier-pro-display", $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
@@ -22,9 +22,12 @@ $base-border-radius: 2px;
 $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 
+// Background Color
+$base-background-color: $brand-black;
+
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-font-color: $grey-dark;
+$base-accent-color: $brand-primary;
 
 // Link Colors
 $base-link-color: $base-accent-color;
@@ -57,9 +60,11 @@ $transition-quick: 150ms;
 $transition-fast: 250ms;
 
 // Font-weights
-$font-thin: 200;
+$font-thin: 100;
 $font-light: 300;
 $font-normal: 400;
-$font-bold: 600;
+$font-semi: 600;
+$font-bold: 700;
+$font-xbold: 800;
 
 

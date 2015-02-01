@@ -14,32 +14,32 @@ $bright-green: lighten(saturate($green, 20), 4);
 $light-yellow: #FFF6BF;
 $yellow: darken($light-yellow, 50);
 
-$orange: #FF8000; // saturate(invert($blue), 25);
-$maroon: #993333;
-$purple: #544E66; // saturate(lighten(#544E66, 10), 10);
-$leather: #6a6360;
+$orange: #FF8000;
+$purple: #544E66;
 
-$grey-subtle: lighten($leather, 57);
+// Greys
+$grey: #777;
+
+$grey-subtle: lighten($grey, 57);
 $grey-tint: darken($grey-subtle, 3);
 $grey-lightest: darken($grey-tint, 3);
-$grey-lighter: lighten($leather, 47);
-$grey-light: lighten($leather, 35);
-$grey-mid: lighten($leather, 15);
-$grey: $leather;
-$grey-dark: darken($leather, 15);
+$grey-lighter: lighten($grey, 47);
+$grey-light: lighten($grey, 35);
+$grey-mid: lighten($grey, 15);
+$grey: $grey;
+$grey-dark: darken($grey, 15);
 
-$light-gray: $grey-light;
-$medium-gray: $grey;
-$dark-gray: $grey-dark;
+// Brand colors.
+$beer: #F79400;
+$wine: #852F38;
+$dark: #231F20;
 
-
-// Background Color
-$base-background-color: $grey-subtle;
-
-$brand-primary: $green;
+$brand-primary: $beer;
 $brand-primary-mid: darken($brand-primary, 10);
 $brand-primary-dark: darken($brand-primary, 25);
 
-$brand-alt: $leather;
+$brand-alt: $wine;
 $brand-alt-mid: darken($brand-alt, 10);
 $brand-alt-dark: darken($brand-alt, 25);
+
+$brand-black: $dark;
