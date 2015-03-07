@@ -14,11 +14,9 @@
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 12px;
-	font-size: rem(11.5);
+	@include font-size(12);
 
 	background-color: $base-button-color;
-	// box-shadow: darken($base-button-color, 15) 0 1px 0;
 
 	&:hover {
 		background-color: $hover-button-color;
@@ -41,7 +39,6 @@
 	// Default
 	&-default {
 		background-color: $grey-lightest;
-		// box-shadow: darken($grey-lightest, 10) 0 1px 0;
 		color: $grey-dark;
 
 		&:hover {
@@ -53,7 +50,6 @@
 	// Action button
 	&-action {
 		background-color: $orange;
-		// box-shadow: darken($orange, 15) 0 1px 0;
 
 		&:hover {
 			background-color: darken($orange, 5);
@@ -84,7 +80,6 @@
 	&-dark {
 		background-color: $grey-dark;
 		box-shadow: none;
-		// box-shadow: darken($grey-dark, 10) 0 1px 0;
 
 		&:hover {
 			background-color: darken($grey-dark, 5);
@@ -101,7 +96,7 @@
 		&,
 		&:link {
 			background-color: transparent;
-			box-shadow: none; // inset tint($blue, 10) 0 0 0 1px;
+			box-shadow: none;
 			color: $blue;
 		}
 
@@ -113,43 +108,36 @@
 		&:active {
 			background: rgba($blue,.1);
 			box-shadow: none;
-			// box-shadow: inset tint($blue, 15) 0 0 0 1px, inset rgba(#000,.2) 0 2px 1px;
 		}
 	}
 
 	@include media($small-screen-up) {
 
-		font-size: 14px;
-		font-size: rem(13.5);
+		@include font-size(14);
 		font-weight: $font-bold;
 		@include pad($gutter*.6 $gutter);
 
 		&-link {
-			font-size: 15px;
-			font-size: rem(14.5);
+			@include font-size(15);
 		}
 
 		// Small
 		&-sm {
 			@include pad($gutter*.55 $gutter*.7);
-			font-size: 13px;
-			font-size: rem(12.5);
+			@include font-size(13);
 
 			&.btn-link {
-				font-size: 14px;
-				font-size: rem(13.5);
+				@include font-size(14);
 			}
 		}
 
 		// X-Small
 		&-xs {
 			@include pad($gutter*.4 $gutter*.6);
-			font-size: 12px;
-			font-size: rem(11.5);
+			@include font-size(12);
 
 			&.btn-link {
-				font-size: 13px;
-				font-size: rem(12.5);
+				@include font-size(13);
 			}
 		}
 
