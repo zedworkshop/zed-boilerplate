@@ -247,6 +247,33 @@ $vertical-spacing: $base-spacing;
 	}
 }
 
+.u-cushionBottom {
+
+	@include media($small-screen-up) {
+		&,
+		&-lg {
+			padding-bottom: 5%;
+		}
+	}
+
+	@include media($medium-screen-up) {
+		padding-bottom: 10%;
+
+		&-lg {
+			padding-bottom: 15%;
+		}
+	}
+
+	// Short screens
+	@include media(min-width $medium-screen max-height 720px 12) {
+		padding-bottom: 7.5%;
+
+		&-lg {
+			padding-bottom: 12.5%;
+		}
+	}
+}
+
 
 // Top
 .u-padT0 {
@@ -338,6 +365,14 @@ $vertical-spacing: $base-spacing;
 
 .u-tablecelld {
 	display: table-cell;
+}
+
+.u-block {
+	display: block;
+}
+
+.u-inline {
+	display: inline-block;
 }
 
 /*
