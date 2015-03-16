@@ -224,6 +224,7 @@ $vertical-spacing: $base-spacing;
 
 	@include media($small-screen-up) {
 		&,
+		&-sm,
 		&-lg {
 			padding-top: 5%;
 		}
@@ -231,6 +232,10 @@ $vertical-spacing: $base-spacing;
 
 	@include media($medium-screen-up) {
 		padding-top: 10%;
+
+		&-sm {
+			padding-top: 7%;
+		}
 
 		&-lg {
 			padding-top: 15%;
@@ -240,6 +245,10 @@ $vertical-spacing: $base-spacing;
 	// Short screens
 	@include media(min-width $medium-screen max-height 720px 12) {
 		padding-top: 7.5%;
+
+		&-sm {
+			padding-top: 5%;
+		}
 
 		&-lg {
 			padding-top: 12.5%;
@@ -251,6 +260,7 @@ $vertical-spacing: $base-spacing;
 
 	@include media($small-screen-up) {
 		&,
+		&-sm,
 		&-lg {
 			padding-bottom: 5%;
 		}
@@ -258,6 +268,10 @@ $vertical-spacing: $base-spacing;
 
 	@include media($medium-screen-up) {
 		padding-bottom: 10%;
+
+		&-sm {
+			padding-bottom: 7%;
+		}
 
 		&-lg {
 			padding-bottom: 15%;
@@ -267,6 +281,10 @@ $vertical-spacing: $base-spacing;
 	// Short screens
 	@include media(min-width $medium-screen max-height 720px 12) {
 		padding-bottom: 7.5%;
+
+		&-sm {
+			padding-bottom: 5%;
+		}
 
 		&-lg {
 			padding-bottom: 12.5%;
@@ -610,8 +628,3 @@ $vertical-spacing: $base-spacing;
 		display: none !important;
 	}
 }
-
-
-
-
-
