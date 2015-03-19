@@ -26,7 +26,11 @@
     "jshint-stylish": "^1.0.0",
     "main-bower-files": "^2.4.0",
     "uglify-save-license": "^0.4.1",
-    "wiredep": "^2.1.0"
+    "wiredep": "^2.1.0",
+    "gifsicle": "^2.0.1",
+    "jpegtran": "^0.1.0",
+    "optipng": "^0.1.1",
+    "svgo": "^0.5.0"
   },
   "engines": {
     "node": ">=0.10.0"
